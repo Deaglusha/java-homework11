@@ -10,7 +10,9 @@ public class Main {
                 "Amanda", "Scott",
                 "Teresa", "Diaz",
                 "Wanda", "Thomas");
-        List<String> result1 = Exercise1.getOddString(input1);
+        /*List<String> result1 = Exercise1.getOddString(input1);
+        result1.forEach(System.out::println);*/
+        System.out.println(Exercise1.getOddString(input1));
 
         //Exercise2
         List<String> input2 = Arrays.asList("Harry", "Ross",
