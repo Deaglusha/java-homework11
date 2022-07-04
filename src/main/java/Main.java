@@ -10,9 +10,7 @@ public class Main {
                 "Amanda", "Scott",
                 "Teresa", "Diaz",
                 "Wanda", "Thomas");
-        /*List<String> result1 = Exercise1.getOddString(input1);
-        result1.forEach(System.out::println);*/
-        System.out.println(Exercise1.getOddString(input1));
+        System.out.println(Exercise1.getString(input1));
 
         //Exercise2
         List<String> input2 = Arrays.asList("Harry", "Ross",
@@ -20,10 +18,11 @@ public class Main {
                 "Carolyn", "Morgan",
                 "Albert", "Walker");
         List<String> result2 = Exercise2.getUpperCaseDescendedOrder(input2);
+        result2.forEach(System.out::println);
 
         //Exercise3
         String[] input3 = new String[]{"1, 2, 0", "4, 5"};
-        String result3 = Exercise3.arraySort(input3);
+        System.out.println(Exercise3.arraySort(input3));
 
         //Exercise4
         Stream<Long> random = Exercise4.getStreamRandomLong(1L, 25214903917L, 11L, (long) Math.pow(2, 48));

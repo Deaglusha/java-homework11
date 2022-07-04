@@ -12,26 +12,10 @@ import java.util.stream.IntStream;
         */
 
 public class Exercise1 {
-    /*public static List<String> getOddString(List<String> input) {
+    public static String getString(List<String> input) {
         return IntStream.range(0, input.size())
                 .filter(n -> n % 2 != 0)
-                .mapToObj(input::get)
-                .collect(Collectors.toList());
-    }*/
-
-    public static String getOddString(List<String> input) {
-        StringBuilder builder = new StringBuilder();
-
-        for (int i = 0; i < input.size(); i++) {
-            if (i % 2 != 0) {
-                builder.append(i);
-                builder.append(". ");
-                builder.append(input.get(i));
-                builder.append(", ");
-            }
-        }
-        String result = String.valueOf(builder);
-        result = result.substring(0, result.length() - 2);
-        return result;
+                .mapToObj(index -> index + ". " + input.get(index))
+                .collect(Collectors.joining(", "));
     }
 }

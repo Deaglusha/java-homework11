@@ -10,14 +10,14 @@ import java.util.stream.Stream;
 
 public class Exercise5 {
     public static <T> Stream<T> zip(Stream<T> first, Stream<T> second) {
-        Iterator<T> iteratorFirst = first.iterator();
-        Iterator<T> iteratorSecond = second.iterator();
-        Stream<T> resultStream = Stream.empty();
+        Iterator<T> firstElements = first.iterator();
+        Iterator<T> secondElements = second.iterator();
+        Stream<T> result = Stream.empty();
 
-        while (iteratorFirst.hasNext() && iteratorSecond.hasNext()) {
-            resultStream = Stream.concat(resultStream, Stream.of(iteratorFirst.next(), iteratorSecond.next()));
+        while (firstElements.hasNext() && secondElements.hasNext()) {
+            result = Stream.concat(result, Stream.of(firstElements.next(), secondElements.next()));
         }
 
-        return resultStream;
+        return result;
     }
 }
