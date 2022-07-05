@@ -15,7 +15,7 @@ public class Exercise1 {
     public static String getString(List<String> input) {
         return IntStream.range(0, input.size())
                 .filter(n -> n % 2 != 0)
-                .mapToObj(index -> index + ". " + input.get(index))
+                .mapToObj(index -> String.format("%d. %s", index, input.get(index - 1)))
                 .collect(Collectors.joining(", "));
     }
 }
